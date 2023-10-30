@@ -25,7 +25,13 @@ app.get('/produto3', (req, res) => {
   res.render('produto3', { message: 'sobr3' });
 });
 
+app.get('/sobrenos', (req, res) => {
+  res.render('sobrenos', { message: 'sobre nós' });
+});
 
+app.get('/contato', (req, res) => {
+  res.render('contato', { message: 'contato' });
+});
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
