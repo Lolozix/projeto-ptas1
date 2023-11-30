@@ -15,32 +15,17 @@
         <li><a href="http://localhost:3000/contato">Contato</a></li>
       </ul>
     </nav> 
-
-    <% for (let produto of produtos) { %>
-    <h1>lolo</h1>
-    <%} %>
+  </header>
 
   <div class="produtos-em-destaque">
-    <div class="produto">
-      <a href="produto1">
-        <img src="https://static.shoptimao.com.br/produtos/camisa-corinthians-i-2324-sn-torcedor-nike-feminina/14/JD8-2746-014/JD8-2746-014_zoom1.jpg?ts=1681336541&ims=326x" alt="Camisa Corinthians I 23/24 s/n° Torcedor Nike Masculina - Branco">
-        <p>Camisa Corinthians I 23/24 s/n° Torcedor Nike Masculina - Branco</p>
-      </a>
-    </div>
-
-    <div class="produto">
-      <a href="produto2">
-        <img src="https://static.shoptimao.com.br/produtos/camisa-corinthians-ii-2223-sn-torcedor-nike-masculina/26/2IC-7507-226/2IC-7507-226_zoom1.jpg?ts=1652226865&ims=326x" alt="Camisa Corinthians II 22/23 s/n° Torcedor Nike Masculina - Cinza+Branco">
-        <p>Camisa Corinthians II 22/23 s/n° Torcedor Nike Masculina - Cinza+Branco</p>
-      </a>
-    </div>
-
-    <div class="produto">
-      <a href="produto3">
-        <img src="https://static.shoptimao.com.br/produtos/camiseta-corinthians-paulista-masculina/14/D65-5101-014/D65-5101-014_zoom1.jpg?ts=1648745621&ims=326x" alt="Camiseta Corinthians Paulista Masculina">
-        <p>Camiseta Corinthians Paulista Masculina</p>
-      </a>
-    </div>
+    <% for (let produto of produtos){ %>
+      <div class="produto">
+        <a href="produtos/<%= produto.id %>">
+          <img src="https://static.shoptimao.com.br/produtos/camisa-corinthians-i-2324-sn-torcedor-nike-feminina/14/JD8-2746-014/JD8-2746-014_zoom1.jpg?ts=1681336541&ims=326x" alt="Camisa Corinthians I 23/24 s/n° Torcedor Nike Masculina - Branco">
+          <p>Camisa Corinthians I 23/24 s/n° Torcedor Nike Masculina - Branco</p>
+        </a>
+      </div>
+    <% } %>
   </div>
 
   <footer class="footer">

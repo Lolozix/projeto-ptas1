@@ -24,32 +24,14 @@ function buscarProdutoPorId(id) {
 }   
 
 app.get('/', (req, res) => {
-  res.render('index', { message: 'produtos' });
+  res.render('index', { produtos });
 });
 
 app.get('/produtos', (req, res) => {
-  res.render('produtos', { message: 'produtoDestaque' });
+  const produto = buscarProdutoPorId(req.params.id)
+  res.render("produtos/produto1", { produto } );
 });
 
-app.get('/produto1', (req, res) => {
-  res.render('produto1', { message: 'sobre1' });
-});
-
-app.get('/produto2', (req, res) => {
-  res.render('produto2', { message: 'sobre2' });
-});
-
-app.get('/produto3', (req, res) => {
-  res.render('produto3', { message: 'sobr3' });
-});
-
-app.get('/sobrenos', (req, res) => {
-  res.render('sobrenos', { message: 'sobre nós' });
-});
-
-app.get('/contato', (req, res) => {
-  res.render('contato', { message: 'contato' });
-});
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
